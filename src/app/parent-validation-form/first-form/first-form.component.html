@@ -1,0 +1,117 @@
+<form [formGroup]='signUpForm' (ngSubmit)="onSubmit($event)">
+
+    <div class="form-group">
+        <label class="control-label" for="name"
+          >Name <span style="color: red">&#8270;</span></label
+        >
+        <input
+          type="text"
+          id="name"
+          class="input-form-control"
+          formControlName="firstName"
+        />
+        <span
+          class="input-alert"
+          *ngIf="
+            !signUpForm.get('firstName').valid &&
+            signUpForm.get('firstName').touched
+          "
+          >The Name field is required</span
+        >
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="lasName">Last Name</label>
+        <input
+          type="text"
+          id="lastName"
+          class="input-form-control"
+          formControlName="lastName"
+        />
+        <span
+          class="input-alert"
+          *ngIf="
+            !signUpForm.get('lastName').valid &&
+            signUpForm.get('lastName').touched
+          "
+          >The Last name field is required</span
+        >
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          class="input-form-control"
+          formControlName="email"
+        />
+        <span
+          class="input-alert"
+          *ngIf="
+            !signUpForm.get('email').valid && signUpForm.get('email').touched
+          "
+          >Email is required</span
+        >
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="username">Username</label>
+        <input
+          type="text"
+          id="username"
+          class="input-form-control"
+          formControlName="username"
+        />
+        <span
+          class="input-alert"
+          *ngIf="
+            !signUpForm.get('username').valid &&
+            signUpForm.get('username').touched
+          "
+          >Username field is required</span
+        >
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          class="input-form-control"
+          formControlName="password"
+        />
+        <span
+          class="input-alert"
+          *ngIf="
+            !signUpForm.get('password').valid &&
+            signUpForm.get('password').touched
+          "
+          >Password field is required</span
+        >
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="confirmpass">Confirm password</label>
+        <input
+          type="password"
+          id="confirmpass"
+          class="input-form-control"
+          formControlName="confirmPass"
+        />
+        <span
+          class="input-alert"
+          *ngIf="
+            !signUpForm.get('confirmPass').valid &&
+            signUpForm.get('confirmPass').touched
+          "
+          >Confirm password is required</span
+        >
+      </div>
+      <div class="form-group">
+        <input
+          type="submit"
+          value="Continue"
+          id="submit"
+          class="input-form-control submit"
+        />
+      </div>
+
+</form>
+
+

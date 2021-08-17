@@ -1,0 +1,14 @@
+<div class="signUpForm">
+    <h4>Welcome</h4>
+  <div class="form-group-container">
+    <div class="text-center">
+        <div class="circle1 active">1</div>
+        <div class="line"></div>
+        <div class="circle2">2</div>
+        <div class="line"></div>
+        <div class="circle3">3</div>
+      </div>
+    <app-first-form (continueClicked)="firstValidationContinue($event)" *ngIf="!isFirstFormValid"></app-first-form>
+    <app-second-form *ngIf="isFirstFormValid"></app-second-form>
+    <!-- <app-third-form></app-third-form> -->
+</div>

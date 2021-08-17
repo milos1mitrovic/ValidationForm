@@ -1,0 +1,88 @@
+<form [formGroup]='signUpForm' (ngSubmit)="onSubmit($event)">
+    <div class="form-group">
+        <label class="control-label" for="language"
+          >Language</label
+        >
+        <select
+          id="language"
+          name="language"
+          class="input-form-control"
+          formControlName="language"
+        >
+            <option *ngFor='let lang of languages' [ngValue]="lang" selected>{{lang}}</option>
+        </select>
+        
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="country">Country</label>
+        <select
+        id="country" 
+        name="country"
+        class="input-form-control"
+        formControlName="country"
+      >
+          <option [ngValue]='defaultCountry' selected>{{ defaultCountry }}</option>
+      </select>
+     
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="address">Address</label>
+        <input
+          type="text"
+          id="address"
+          class="input-form-control"
+          formControlName="address"
+        />
+        <span
+          class="input-alert"
+          *ngIf="
+            !signUpForm.get('address').valid && signUpForm.get('address').touched
+          "
+          >The Address field is required</span
+        >
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="city">City</label>
+        <input
+          type="text"
+          id="city"
+          class="input-form-control"
+          formControlName="city"
+        />
+        <span
+          class="input-alert"
+          *ngIf="
+            !signUpForm.get('city').valid &&
+            signUpForm.get('city').touched
+          "
+          >The City field is required</span
+        >
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="zip">Zip</label>
+        <input
+          type="text"
+          id="zip"
+          class="input-form-control"
+          formControlName="zip"
+        />
+        <span
+          class="input-alert"
+          *ngIf="
+            !signUpForm.get('zip').valid &&
+            signUpForm.get('zip').touched
+          "
+          >The Zip field is required</span
+        >
+      </div>
+      
+      <div class="form-group">
+        <input
+          type="submit"
+          value="Continue"
+          id="submit"
+          class="input-form-control submit"
+        />
+      </div>
+
+</form>
