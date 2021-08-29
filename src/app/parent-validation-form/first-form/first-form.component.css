@@ -1,35 +1,44 @@
 .form-group {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.mat-raised-button {
+  color: red;
+  width: 50%;
+  background-color: blue;
+  border-radius: 10px;
+  margin: 10px auto;
+  display: block;
 }
 
 .input-form-control {
-    position: relative;
-    width: 100%;
-    padding:5px 10px;
-    font-size: 14px;
-    color: rgb(133, 130, 130);
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    line-height: 1.42857143;
-  }
+  position: relative;
+  width: 100%;
+  padding: 5px 10px;
+  font-size: 14px;
+  color: rgb(133, 130, 130);
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  line-height: 1.42857143;
+}
 
-  .submit{
-    background-color: #282828;
-    color: #ffd200;
-    text-transform: uppercase;
-    padding: 5px 10px
-  }
+.submit {
+  background-color: #282828;
+  color: #ffd200;
+  text-transform: uppercase;
+  padding: 5px 10px;
+}
 
-  .input-alert{
-    color: #c0392b;
-    font-size: 13px;
-    font-weight: 400;
-  }
+.input-alert {
+  color: #c0392b;
+  font-size: 13px;
+  font-weight: 400;
+}
 
-  .control-label{
-    font-size: 14px;
-    font-weight: bold;
-  }
+.control-label {
+  font-size: 14px;
+  font-weight: bold;
+}

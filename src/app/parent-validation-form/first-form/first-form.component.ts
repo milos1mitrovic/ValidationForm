@@ -1,21 +1,21 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+
+// export interface DialogData {}
 
 @Component({
   selector: 'app-first-form',
   templateUrl: './first-form.component.html',
-  styleUrls: ['./first-form.component.css']
+  styleUrls: ['./first-form.component.css'],
 })
 export class FirstFormComponent implements OnInit {
-
-  @Input() showForm: boolean = false;
-
-  @Input() signUpForm: FormGroup;
+  showForm: boolean = false;
+  signUpForm: FormGroup;
   @Output() continueClicked = new EventEmitter<boolean>();
 
   submitted: boolean = false;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
     this.signUpForm = new FormGroup({
@@ -39,6 +39,7 @@ export class FirstFormComponent implements OnInit {
       isValid = this.signUpForm.valid;
     }
     this.continueClicked.emit(isValid);
+    console.log('submmited');
   }
 
   validateAllFormFields(formGroup: FormGroup) {
