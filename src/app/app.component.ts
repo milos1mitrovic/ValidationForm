@@ -12,7 +12,7 @@ export class AppComponent {
   showForm = false;
 
   showRegisterForm() {
-    this.showForm = true;
+    // this.showForm = true;
     this.dialog.open(FirstFormComponent);
     // console.log(dialogRef);
   }

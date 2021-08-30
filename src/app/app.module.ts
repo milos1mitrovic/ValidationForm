@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
@@ -23,7 +22,6 @@ import { ThirdFormComponent } from './parent-validation-form/third-form/third-fo
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MaterialModule,
-    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
